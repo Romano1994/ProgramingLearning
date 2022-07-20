@@ -1,3 +1,4 @@
+https://archiving9423.tistory.com/manage/newpost/?type=post&returnURL=%2Fmanage%2Fposts%2F
 생활코딩
 while 문
 인간은 반복되는 일을 싫어하고 못한다. 때문에 컴퓨터에게 이러한 일을 맡기기 위해서 만들어진 것이 반복문이다.
@@ -125,7 +126,3 @@ github.com
 dropbox client  - dropbox.com server
 
 ----------
-
-github.com
-
-git client - git server
