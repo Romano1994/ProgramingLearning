@@ -1,0 +1,131 @@
+생활코딩
+while 문
+인간은 반복되는 일을 싫어하고 못한다. 때문에 컴퓨터에게 이러한 일을 맡기기 위해서 만들어진 것이 반복문이다.
+while문의 기본 형식은 이와 같다.
+while(조건) {
+	반복 할 작업
+    }
+//(조건)은 언제까지 실행할 것인가
+//=> (조건)이 true인 동안 반복할 작업을 실행한다
+하지만 '언제까지'가 빠지면 반복문의 큰 효용을 갖지 못한다
+
+public class javawhile {
+	public static void main(String[] args) {
+		int i = 0;	
+		while (true) {
+				while (i < 10) {
+					System.out.println("Everybody Cording" + i);
+					i++;
+			}
+		}
+	}
+}
+이와같이 i가 10이상이 된다면 멈춘다는 멈추는 시점을 지정해야 반복문의 효용이 늘어난다
+-------------------------------------------
+for문
+
+코드의 수가 증가할 수록, 복잡해질 수록 반복문을 위한 요소들이 멀리 떨어져있게 되고 코드를 위한 분석이 어려워진다. 이를 보완하기 위한게 for문.
+
+for문은 초기값이 있고, 반복을 멈추기 위한 조건이 있고, 반복이 진행될 수록 변형되는 요소 (i++)가 있다면 while보다는 for를 쓰는 것이 바람직하다. 
+
+for문의 기본 문법은 다음과 같다.
+
+for(초기화; 종료조건; 반복실행) {
+	반복적으로 실행 될 구문
+    }
+ //초기화 = i = 0;
+ //종료조건 = i < 10;
+ //반복실행 = i++;
+이를 토대로 코드를 만들면 다음과 같다.
+
+public class javaFor {
+
+	public static void main(String[] args) {
+		for (int i = 0; i < 10; i ++) {
+			System.out.println("Everybody Cording" +i+3);
+		}
+	}
+}
+--------------------------------------------
+반복문의 제어
+
+반복문의 종료조건과는 무관하게 로직 안에서 반복문을 멈추거나 건너뛰게 하는 코드가 break, continue
+
+public class javaBreakContinue {
+
+	public static void main(String[] args) {
+		for (int i= 0; i < 10; i++) {
+			if (i == 5)
+				break;
+			System.out.println("Cording Everybody" + i);
+		}
+	}
+
+}
+public class javaBreakContinue {
+
+	public static void main(String[] args) {
+		for (int i= 0; i < 10; i++) {
+			if (i == 5)
+				continue;
+			System.out.println("Cording Everybody" + i);
+		}
+	}
+
+}
+// 반복문이 실행되다가 if ( i == 5)가 되는 순간에 
+//if = true가 되기 때문에 5를 건너 뛰고 다시 i가 6이 되면서 실행된다
+//따라서 if가 false일때는 continue가 실행안됨
+반복문의 중첩
+
+public class javaLoopDepth {
+
+	public static void main(String[] args) {
+		for (int i= 0; i < 10; i++) {
+			for (int j = 0; j < 10; j++) {
+				System.out.println(i + " "+ j);
+			}
+		}
+	}
+}
+i의 값이 10이 될때까지 for문 안에 있는 for문이 실행된다. 때문에 i가 0인 상태로 j가 1~9까지 실행되고 j가 false가 되면 다시 i의 for문으로 넘어가서 i = 1이 되기 때문에 j의 for문이 실행된다.
+
+생활코딩 - 변수
+
+변수는 데이터를 담는 상자다. 여기에 데이터는 다른 데이터로 바꿀 수 있다
+
+int = a;에서 int는 데이터의 형식, a는 변수의 이름이다. 이와같은 구문은 변수를 선언한 구문이다.
+
+정수와 실수
+
+정수-int
+
+실수-double
+
+변수가 데이터의 형식을 제한하지 않는다면 코드를 사용하는 이후에 문제가 발생할 가능성이 높다
+
+문자열 데이터 타입
+
+string
+
+string a;
+a = "coding";
+
+string a = "coding";
+위 두개의 변수 선언은 같은 뜻이다.
+
+함수로 인해서 중복의 제거 - 가독성이 좋아짐, 유지보수의 용의성이 늘어남
+
+github.com
+
+깃허브는 다수의 개발자가 개발을 위해 사용하는 파일 공유 서비스
+
+드랍박스
+
+dropbox client  - dropbox.com server
+
+----------
+
+github.com
+
+git client - git server
