@@ -32,17 +32,13 @@ class SutdaDeck {
     SutdaCard[] cards = new SutdaCard[CARD_NUM];
 
     SutdaDeck() {
-        for (int i = 1; i < cards.length/2; i++) {
-            if (i==1 || i==3 || i==8){
-                cards[i-1] = new SutdaCard(i,true);
-            }else if(i==10){
-                cards[i-1] = new SutdaCard(i, false);
-            }else{
-                cards[i-1] = new SutdaCard(i, false);
+        for (int i = 0; i < cards.length; i++) {
+            if (i<10 &&(i==0||i==2||i==7
+            )){
+                cards[i] = new SutdaCard(i%10+1,true);
+            }else {
+                cards[i] = new SutdaCard(i%10+1, false);
             }
-        }
-        for (int i= 10; i < cards.length; i++){
-            cards[i] = new SutdaCard(i,false);
         }
     }
 }
