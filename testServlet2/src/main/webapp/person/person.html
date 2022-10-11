@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+#color{
+width: 70px;
+}
+#nameDiv{
+color : red;
+margin-top : 5px;
+}
+</style>
+</head>
+<body>
+	<form name="personForm" method="" action="http://localhost:8080/testServlet2/personServlet">
+		<table border="1" cellpadding="5" >
+			<tr>
+				<td width="70" align="center">이름</td>
+				<td><input type="text" id="name" name="name">
+				<div id="nameDiv"></div>
+				</td>
+			</tr>
+			<tr>
+				<td width="70" align="center">성별</td>
+				<td>
+				<table border="1">
+					<tr><td width="250">
+						<input type="radio" name="gender" value="0">남
+						<input type="radio" name="gender" value="1">여</td>
+					</td></tr>
+				</table>
+				</td>
+			</tr>
+			<tr>
+				<td width="70" align="center">색깔</td>
+				<td>
+					<select id="color" name="color">
+						<option value="red">빨강</option>
+						<option value="blue">파랑</option>
+						<option value="magenta">보라</option>
+						<option value="cyan">하늘</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td width="70" align="center">취미</td>
+				<td>
+					<input type="checkbox" class=hobby name=hobby value="독서">독서
+					<input type="checkbox" class=hobby name=hobby value="영화">영화
+					<input type="checkbox" class=hobby name=hobby value="음악">음악
+					<input type="checkbox" class=hobby name=hobby value="게임">게임
+					<input type="checkbox" class=hobby name=hobby value="쇼핑">쇼핑
+				</td>
+			</tr>
+			<tr>
+				<td width="70" align="center">과목</td>
+				<td>
+					<select value="subject" id="subject" name="subject" multiple="multiple">
+						<option>JAVA</option>				
+						<option>Servlet</option>				
+						<option>JSP</option>				
+						<option>SPRING</option>				
+					</select>		
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					<input type="button" value="SEND" onclick="javascript:check()">
+					<input type="reset" value="CANCEL">
+				</td>
+		</table>
+		<ul>
+  <li> Item one </li>
+  <li> Item two </li>
+</ul>
+
+	</form>
+	<script type="text/javascript">
+	function check(){
+		document.getElementById("nameDiv").innerText == "";
+		if(document.getElementById("name").value == ""){
+			document.getElementById("nameDiv").innerText = "이름을 입력하세요";
+		}else{
+			document.personForm.submit();
+		}
+	}
+	</script>
+</body>
+</html>
