@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>writeForm</title>
+<style type="text/css">
+
+.address{
+	width:450px
+
+}
+</style>
+</head>
+<body>
+<h1>회원가입</h1> <br>
+<table border="1" width="600px" cellpadding="1" cellspacing="0">
+
+		<tr> <!-- 이름 -->
+			<th><label for="name_id"> 이름 </label></th>	<!-- 가운데 정렬, 굵게 -->	
+			<td> 
+					 <!--  label 태그의 for="" 와 input 태그의 id="" 같아야 한다. -->				
+					<input type="text" name="name" id="name_id" placeholder="이름 입력" />		
+			 </td>
+		</tr >
+		
+		<tr> <!-- 아이디 -->
+			<th><label for="user_id"> 아이디</label></th>	<!-- 가운데 정렬, 굵게 -->	
+			<td> 
+				<!--  label 태그의 for="" 와 input 태그의 id="" 같아야 한다. -->
+				<input type="text"  name="user" id="user_id" placeholder="아이디 입력"  />		
+			</td>
+		</tr>
+		
+		<tr> <!-- 비밀번호 -->
+			<th><label for="pwd_id"> 비밀번호</label></th>	<!-- 가운데 정렬, 굵게 -->	
+			<td> 
+				<!--  label 태그의 for="" 와 input 태그의 id="" 같아야 한다. -->
+				<input type="password" name="pwd" id="pwd_id"/>		
+			</td>
+		</tr>
+		
+		<tr> <!-- 재확인 -->
+			<th><label for="rpwd_id" >재확인</label></th>	<!-- 가운데 정렬, 굵게 -->	
+			<td> 
+				 <!--  label 태그의 for="" 와 input 태그의 id="" 같아야 한다. -->
+				<input type="password" name="rpwd" id="rpwd_id"  />		
+			</td>
+		</tr>
+		
+		<tr>
+			<th>성별</th>	<!-- 가운데 정렬, 굵게 -->	
+			<td> 
+				<input type="radio" name="gender_" id="gender_m" value="M" checked /> 
+				<label for="gender_m">남</label>
+				<input type="radio" name="gender" id="gender_f" value="F" /> 
+				<label for="gender_f">여</label>
+			</td>
+		</tr>
+		
+		<tr>
+			<th><label for="email1_id" >이메일</label></th>	<!-- 가운데 정렬, 굵게 -->	
+			<td> 
+				<form name=emailForm >
+				<input type="text" name="email1" id="email1_id"  >
+				@
+				<input type="text" name="selected" >
+					<select onchange="document.emailForm.selected.value=this[this.selectedIndex].value">
+					  <option value="">직접 입력</option>
+					  <option value="gmail.com">gmail.com</option>
+					  <option value="naver.com">naver.com</option>
+					  <option value="daum.net">daum.net</option>					  
+					</select>					
+				</form>
+		    </td>
+		</tr>
+		
+		<tr>
+			<th>핸드폰</th>	<!-- 가운데 정렬, 굵게 -->	
+			<td> 
+				<form >
+				<select name="tel1" style="width:50px">
+				<option value="010">010</option>
+				<option value="011">011</option>
+				<option value="019">019</option>
+				</select> - <input  type="text" name="tel2" style="width:50px"> - <input type="text" name="tel3" style="width:50px">
+				</form>
+			</td>
+		</tr>
+		
+		<tr>
+			<th>주소</th>	<!-- 가운데 정렬, 굵게 -->	
+				<td> 
+					<input type="text" name="zipcode">
+					<input type="button" value ="우편번호검색">
+					<br>
+					<input class="address" type="text" name="addr1"  placeholder="주소" />	
+					<br>
+					<input class="address" type="text" name="addr2"  placeholder="상세주소" />						
+				</td>
+		</tr>
+
+			<tr>
+			<th colspan="2"> 
+			<input type="submit" value ="회원가입">
+			<input type="reset" value ="다시작성">
+			</th> <!-- colspan 은 병합 -->
+		</tr>	
+
+</table>
+
+</body>
+</html>
