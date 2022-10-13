@@ -12,7 +12,7 @@ div{
 </head>
 <body>
 	<h2>회원가입</h2>
-		<form name="signUpForm" method="post" action="">
+		<form name="signUpForm" method="post" action="/memberServlet/WriteServlet">
 			<table border="1" width="600"celpadding="3"cellspacing="0">
 				<tr>
 					<th><label for="userName">이름</label></th>
@@ -45,7 +45,7 @@ div{
 				<tr>
 					<th><label for="user_gender">성별</label></th>
 					<td>
-						<input type="radio" name="gender" id="gender_m" value="0" />
+						<input type="radio" name="gender" id="gender_m" value="0" checked/>
 						<label for="gender_m">남자</label>			
 						<input type="radio" name="gender" id="gender_f" value="1" />
 						<label for="gender_f">여자</label>	
@@ -81,7 +81,7 @@ div{
 				<tr>
 					<th><label for="zipcode">주소</label></th>
 					<td>
-						<input type="text" id="zipcode" readonly/>
+						<input type="text" id="zipcode" name="zipcode" readonly/>
 						<input type="button" value="우편번호 검색" onclick="checkPost()"><br>
 						<input type="text" name="addr1" id="addr1" style="width:400px;" placeholder="주소" readonly/><br>
 						<input type="text" name="addr2" id="addr2" style="width:400px;" placeholder="상세주소">
@@ -91,6 +91,7 @@ div{
 					<th colspan="2" >
 						<button onclick="check()">회원가입</button>
 						<button type ="reset">다시작성</button>
+					</th>
 				</tr>	
 			</table>
 		</form>
