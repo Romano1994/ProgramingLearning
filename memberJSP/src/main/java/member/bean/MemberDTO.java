@@ -9,10 +9,10 @@ import lombok.Setter;
 
 //@Data
 @RequiredArgsConstructor
-@NoArgsConstructor
+//@NoArgsConstructor
 @Setter @Getter
 public class MemberDTO {
-	@NonNull
+//	@NonNull
 	private String name;
 	private String id;
 	private String pwd;
@@ -25,6 +25,4 @@ public class MemberDTO {
 	private String zipcode;
 	private String addr1;
 	private String addr2;
-	
-	
 }

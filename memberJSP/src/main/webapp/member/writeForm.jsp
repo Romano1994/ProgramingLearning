@@ -87,7 +87,7 @@
 				</tr>
 				<tr>
 					<th colspan="2" >
-						<button onclick="checkWrite()">회원가입</button>
+						<button type="button" onclick="checkWrite()">회원가입</button>
 						<button type ="reset">다시작성</button>
 					</th>
 				</tr>	
